@@ -5,7 +5,7 @@ function mudar(e){
     if(e.target.className == 'mudarColor')
     {
         img.src = '../image/white-t-shirt-mockup.webp'
-        img.alt = 'camisa da mockup branca'
+        img.attributes.alt = 'camisa da mockup branca'
     }
     function mudarB (e){
         var img = document.querySelector('.img-ctn');
@@ -13,7 +13,7 @@ function mudar(e){
             img.src = '../image/black-t-shirt-mockup.webp'
         }
     }
-    mudarBlack.addEventListener('click',mudarB)
+    mudarBlack.addEventListener('click',mudarB);
 }
 
 mudarCor.addEventListener('click',mudar);

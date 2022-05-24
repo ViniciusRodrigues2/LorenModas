@@ -11,6 +11,7 @@
 body{
     width: 100%;
     height: 100vh;
+    /* overflow-x: hidden; */
 }
 img{
     width: 100%;
@@ -40,12 +41,28 @@ img{
     color: #8f177b;
     font-weight: 600;
 }
+.header .menu-nav .shop{
+    overflow-x: hidden;
+}
 .header .menu-nav .shop i{
     font-size: 1.4em;
     color: #414141;
     cursor: pointer;
 }
-
+.header .menu-nav .shop .menu-shop{
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    display: block;
+    background-color: #0e0e0e;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all .4s ease-out;
+}
+.header .menu-nav .shop .menu-shop.on{
+    width: 50%;
+}
 /* produtos grid */
 
 .container{
@@ -201,6 +218,6 @@ img{
 .rodape .rodape-action i:hover{
     color: #8f177b;
     transform: scale(1.2);
-    background-color: #222;
+    background-color: #111;
     box-shadow: 0 3px 6px #8f177b;
 }
