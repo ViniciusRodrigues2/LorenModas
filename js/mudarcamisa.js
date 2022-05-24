@@ -5,6 +5,7 @@ function mudar(e){
     if(e.target.className == 'mudarColor')
     {
         img.src = '../image/white-t-shirt-mockup.webp'
+        img.alt = 'camisa da mockup branca'
     }
     function mudarB (e){
         var img = document.querySelector('.img-ctn');
