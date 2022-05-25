@@ -1,19 +1,19 @@
-var mudarCor = document.querySelector('.mudarColor');
-var mudarBlack = document.querySelector('.mudarBlack');
-function mudar(e){
-    var img = document.querySelector('.img-ctn');
-    if(e.target.className == 'mudarColor')
-    {
-        img.src = '../image/white-t-shirt-mockup.webp'
-        img.attributes.alt = 'camisa da mockup branca'
-    }
-    function mudarB (e){
-        var img = document.querySelector('.img-ctn');
-        if(e.target.className == 'mudarBlack'){
-            img.src = '../image/black-t-shirt-mockup.webp'
-        }
-    }
-    mudarBlack.addEventListener('click',mudarB);
-}
+let btn = document.querySelector('.btn');
 
-mudarCor.addEventListener('click',mudar);
+function clicou(){
+    let div = document.querySelector('.card')[0];
+    let show = document.getElementsByTagName('h2')[0].textContent
+    let preco = document.getElementsByTagName('h3')[0].textContent
+    let shop = document.querySelector('.menu-shop');
+    shop.innerHTML = `<div class="show">
+        <h2 id="add">adicionado</h2> <br> <h3 class="colorh3">${show}</h3>
+        <br>
+        <span class="preco">${preco}</span>
+        <button>X</button>
+    </div>`;
+    let shopColor = document.querySelector('.shop i');
+    shopColor.style.color = 'purple';
+    shopColor.style.opacity = '0.6'
+    
+}
+btn.addEventListener('click',clicou)
